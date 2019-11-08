@@ -82,7 +82,7 @@ a:hover {
     list-style-type: square;
   }
 /* ----------------------------------------------------------- */
-footer {
+#footer {
   background: #232f3e;
   padding: 20px 0 50px 0;
   white-space: nowrap;
