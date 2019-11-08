@@ -86,7 +86,10 @@ footer {
   background: #232f3e;
   padding: 20px 0 50px 0;
   white-space: nowrap;
+  position: relative;
   bottom: 0;
+
+
 }
 #footer-link {
   margin: 0 30px 0 30px;
