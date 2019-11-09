@@ -19,6 +19,8 @@ a:hover {
 /* ----------------------------------------------------------- */
 .container {
   display: flex;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* ----------------------------------------------------------- */
@@ -104,6 +106,7 @@ a:hover {
   white-space: nowrap;
   position: relative;
   bottom: 0;
+  width: 100%;
 
 
 }
