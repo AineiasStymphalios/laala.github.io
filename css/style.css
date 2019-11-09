@@ -41,9 +41,9 @@ a:hover {
   border-top: 3px solid #f2f2f2;
   float: left;
 }
-#content-text h2 {
+/* #content-text h2 {
   font-weight: 600;
-}
+} */
 #content-text p {
   line-height: 14px;
   padding-top: 5px;
