@@ -10,6 +10,11 @@ html, body {
   box-sizing: border-box;
 }
 
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 a {
   color: #0066c0;
 }
