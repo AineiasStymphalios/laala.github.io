@@ -3,7 +3,7 @@ html, body {
   font-family: ”Meiryo”, sans-serif;
   line-height: 14px;
   font-size: 14px;
-  margin-bottom: 60px
+  position: relative;
 }
 
 * {
@@ -30,6 +30,7 @@ a:hover {
   flex-flow: column;
   width: 80%;
   margin-left: 20px;
+  min-height: 100vh;
 }
 
 
