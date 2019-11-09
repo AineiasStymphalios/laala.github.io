@@ -22,8 +22,6 @@ a:hover {
   display: flex;
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 80px
-  min-height: 100vh;
 }
 
 /* ----------------------------------------------------------- */
@@ -32,6 +30,8 @@ a:hover {
   flex-flow: column;
   width: 80%;
   margin-left: 20px;
+  margin-bottom: 80px;
+  min-height: 100vh;
 }
 
 
