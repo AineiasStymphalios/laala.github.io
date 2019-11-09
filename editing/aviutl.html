@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja-jp" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aviutl | 動画編集</title>
+
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/style-header.css"/>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function() {
+
+           $("#header").load("../header.html");
+           $("#footer").load("../footer.html");
+
+    });
+    </script>
+  </head>
+  <body>
+    <a id="banner" href="#"></a>
+    <!-- Main body -->
+    <header>
+      <div id="header">
+      </div>
+    </header>
+
+
+    <div class="container">
+      <div id="sidebar">
+        <div class="side-title">
+          <h2>動画編集</h2>
+        </div>
+        <div class="side-list">
+          <ul>
+            <li><a href="videos.html">AviUtl</a></li>
+            <li><a href="kirie.html">BB劇場</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="inner-container">
+        <div id="content-header">
+          <h1>AviUtl</h1>
+          <p>乗り換え先が見つからないので
+          </p>
+        </div>
+        <div id="content-text">
+          <div class="content-box">
+            <h2>ショートカット</h2>
+            <h3><b>A</b> アニメーション効果</h3>
+            <p>効果ごとにホットキーが設定出来たらいいんだけどなぁ</p>
+            <h3><b>B</b> クロマキー</h3>
+            <p>青色を透過した状態で右クリックし、「設定の保存」 > 「現在の設定を初期値にする」をしておくと便利</p>
+            <h3><b>H</b> 反転</h3>
+            <p>左右反転に☑を入れたのを初期値にしてます</p>
+            <h3><b>/</b> 最後のオブジェクト位置を最終フレーム</h3>
+            <p>ダーク♂尺あまりを防げます</p>
+            <h3><b>S</b> 分割</h3>
+            <p>デフォルトでこれだったかも</p>
+          </div>
+
+
+          <h2>エイリアス</h2>
+          <p>よく使うやつを登録しておくといいです(小学生並の解説)</p>
+          <img src="../editing/images/alias-main.png" alt="" class="img-aviutl">
+          <p>ごちゃごちゃすぎる</p>
+
+          <h3>登録物の例</h3>
+          <img src="../editing/images/alias-walk.png" alt="" class="img-aviutl">
+          <p>上下に反復移動させるフィルタ効果。座標移動しているオブジェクトに掛け、歩いているように見せる。</p>
+          <p>後でGIFを貼るから待って❤</p>
+
+          <img src="../editing/images/alias-exren.png" alt="" class="img-aviutl">
+          <p>たしかエク蓮兄貴がブロマガに書いてたダメージエフェクト。オブジェクトの下に2、3フレーム置く。</p>
+          <img src="../editing/images/alias-text.png" alt="" class="img-aviutl">
+          <img src="../editing/images/alias-sfx.png" alt="" class="img-aviutl">
+          <p>テキストや効果音のフォルダを作るとたぶん便利。言うほど使ってませんけど</p>
+
+          <h3>エイリアスの足し方</h3>
+          <img src="../editing/images/alias-g1.png" alt="" class="img-aviutl">
+          <p>拡張編集上でオブジェクトやフィルタ効果を右クリック</p>
+          <img src="../editing/images/alias-g2.png" alt="" class="img-aviutl">
+          <p>エイリアス名とフォルダ名を指定。フォルダ名を間違えると修正が面倒なので普段使うやつを覚えておくように</p>
+
+          <h2>フレームバッファ</h2>
+          <p>上にある映像全部を1つのオブジェクトとしてコピーする、みたいなオブジェクト。画面全体にエフェクトを掛けたいけどグループ制御は使いたくない、という時に使う。</p>
+          <img src="../editing/images/framebuffer-vib.png" alt="" class="img-aviutl">
+          <p>フレームバッファに振動を掛けると、画面全体が揺れる。これ1つでシンプルな爆発オチが華やかになる。</p>
+          <p>パープル兄貴的な「勢い」を付けるには放射ブラーとかをガンガン足そう！</p>
+
+          <h2>remmuh兄貴の遺産: ディスプレイスメントマップを使ったノリノリBB</h2>
+          <p>昔ツイッターに上げてたやつです</p>
+
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="footer">
+      </div>
+    </footer>
+  </body>
+</html>
