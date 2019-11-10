@@ -156,10 +156,6 @@ ul#footer-list a {
   color: #c45500;
 }
 
-.img-aviutl {
-  max-width: 50%;
-}
-
 .content-box {
   background: rgba(19,19,4,.04);
   margin-top: 10px;
@@ -171,4 +167,14 @@ ul#footer-list a {
 
 .content-box:hover {
   background: #ebebeb;
+}
+
+.transparent-table, .transparent-table th,  .transparent-table td {
+  padding: 5px 10px 5px;
+  border: 1px solid transparent;
+}
+
+
+.img-aviutl {
+  max-width: 50%;
 }
