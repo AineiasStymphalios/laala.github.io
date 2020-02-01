@@ -17,12 +17,12 @@
            $("#footer").load("../../footer.html");
     });
     </script>
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@aineias_stymph" />
-<meta name="twitter:title" content="あいねいあすのホームページ" />
-<meta name="twitter:description" content="初htmlです" />
-<meta name="twitter:image" content="https://www.laala.mom/img/website-card.png" />
-</head>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@aineias_stymph" />
+    <meta name="twitter:title" content="あいねいあすのホームページ" />
+    <meta name="twitter:description" content="初htmlです" />
+    <meta name="twitter:image" content="https://www.laala.mom/img/website-card.png" />
+  </head>
   <body>
 
     <a id="banner" href="#"></a>
@@ -51,49 +51,59 @@
           </p>
         </div>
         <div id="content-text">
-          <h3>概要</h3>
+
+          <h2>概要</h2>
           <p>動画サイトから動画や音声をコマンドラインでダウンロードできるツール。</p>
           <p>導入方法はいろいろある（適当）</p>
+          <br>
 
-          <h3>導入</h3>
+
+          <h2>導入</h2>
           <p><a href="http://ytdl-org.github.io/youtube-dl/download.html">配布先</a>にある"Windows exe"をダウンロードし、好きな場所に置く</p>
           <p>PATHを追加する。まず、環境変数の設定を開く。</p>
           <img src="yt-dl/path1.png" alt="">
           <p>「環境変数」</p>
           <img src="yt-dl/path2.png" alt="">
           <p>「システム環境変数」下の「Path」を選択、「編集」</p>
-          <img src="yt-dl/path3.png" alt="">
+          <img src="yt-dl/path2.png" alt="">
           <p>「新規」を選択し、youtube-dl.exeを置いたフォルダをコピペ。</p>
           <img src="yt-dl/path4.png" alt="">
           <p>コマンドプロンプトを開き、以下を入力後、ENTER。</p>
           <code>youtube-dl -help</code>
-          <img src="yt-dl/path5.png" alt="">
           <p>ヘルプ画面が出てきたら導入成功。</p>
+          <img src="yt-dl/path5.png" alt="">
+          <br>
 
-          <h3>使い方</h3>
+          <h2>使い方</h2>
           <p>コマンドラインを開き、以下のように入力すると動画がDLされます</p>
           <code>youtube-dl -a [URL]</code>
           <p>音声だけ欲しい場合は</p>
           <code>youtube-dl -x [URL]</code>
           <p>画質とかにこだわりたいなら<a href="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#readme">GitHubページ</a>を参照。私はよくわからないのでスルーしています。</p>
 
-          <h3>バッチファイルでの一括DL</h3>
-          <p>youtube-dl.exeがあるフォルダでテキストファイルを新規作成し、以下を入力して保存。</p>
+          <br>
+
+          <h2>バッチファイルで一括DL</h2>
+          <p>youtube-dl.exeがあるフォルダでテキストファイルを新規作成し、「yt-dl multiple」などと命名。以下を入力して保存。</p>
+
           <code>youtube-dl  -a dl_list.txt <br>
             pause</code>
-          <p>拡張子を.batに変える。</p>
+          <p><b>その後、拡張子を.batに変える。</b></p>
           <p>テキストファイルを新規作成し、「dl_list.txt」に名称変更。このファイルにDLする動画のURLを入れていく。</p>
           <img src="yt-dl/batch1.png" alt="">
           <p>URLを入力し、保存。URLは検索画面のリンクとかでも大丈夫。</p>
           <img src="yt-dl/batch2.png" alt="">
           <p>.batをダブルクリックするとコマンドプロンプトが立ち上がり、youtube-dl.exeを置いたフォルダに動画がDLされる。</p>
-          <p>DLに失敗した時はリトライすると成功したりする。長い動画やフラッシュ時代の動画などは無理なことが多い</p>
+          <p>DLに失敗した時はリトライすると成功したりする。長い動画やフラッシュ時代の動画は無理なことが多い</p>
           <img src="yt-dl/batch3.png" alt="">
           <p>batファイルとdl_list.txtのショートカットをデスクトップに置いておくと便利です。</p>
+          <br><br><br>
 
-          <h3>もっと楽な方法</h3>
+          <h2>もっと楽な方法</h2>
           <p><a href="https://mrs0m30n3.github.io/youtube-dl-gui/">GUI版</a>をインストール。</p>
           <p>終わり！</p>
+
+
       </div>
     </div>
 
