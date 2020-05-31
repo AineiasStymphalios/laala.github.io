@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja-jp" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>迫真音声素材部 Pythonの裏技</title>
+
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/style-header.css"/>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function() {
+
+           $("#header").load("../../header.html");
+           $("#footer").load("../../footer.html");
+    });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/vs.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@aineias_stymph" />
+    <meta name="twitter:title" content="あいねいあすのホームページ" />
+    <meta name="twitter:description" content="迫真音声素材部 Pythonの裏技" />
+    <meta name="twitter:image" content="https://www.laala.mom/img/website-card.png" />
+</head>
+
+
+
+
+
+  <body>
+
+    <a id="banner" href="#"></a>
+    <header>
+      <div id="header">
+      </div>
+    </header>
+    <div class="container">
+      <div id="sidebar">
+        <div class="side-title">
+          <h2>動画編集・講座</h2>
+        </div>
+        <div class="side-list">
+          <ul>
+            <li><a href="../aviutl.html">AviUtl</a></li>
+            <li><a href="../theater.html">その他</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="inner-container">
+        <div id="content-header">
+          <h1>迫真音声素材部 Pythonの裏技</h1>
+          <p>
+          </p>
+        </div>
+        <div id="content-text">
+          <h2 class="gradorange">背景</h2>
+          <p>まじなな☆の音声素材が必要。</p>
+          <p>音声分割の古典的な方法は、Audacityでセリフを1つずつ選択し、ラベルを付けて「複数ファイル出力」だが:</p>
+          <ul>
+            <li>BGMが邪魔</li>
+            <li>Audacityがなぜか日本語の入力を受け付けないので、出力後にリネームしなおす必要がある。</li>
+            <li>一つ一つドラッグ選択するのが面倒臭い</li>
+          </ul>
+          <br>
+          <p>まじなな☆は26話もあり、語録を探すのも面倒なので、できれば全セリフ音声を自動的に分割・リネームしたい。</p>
+          <br>
+          <h2 class="gradorange">音声</h2>
+          <p>そういえば、まじなな☆はYouTube・ニコニコとは別でWindows版が配布されている。</p>
+          <p>Win版は体験版的なやつだろうと思っていたが、よく見たらちゃんと全話収録されていた。</p>
+          <p>フォルダの中身を覗いてみると…………音声ファイルを発見！</p>
+          <br>
+          <p><img src="mgnn/mgnn1.png" alt="" width="30%">
+          <img src="mgnn/mgnn0.png" alt="" width="30%"></p>
+          <br>
+          <p>AviUtlは.oggを読み込めない気がするので.wavに変換しないといけないが、これだけでも各段に作業量が減る。</p>
+          <br>
+
+          <h2 class="gradorange">書き起こし</h2>
+          <p>当然ながら音声ファイル名は台詞そのものではなかったので、書き起こし作業が必要になる。</p>
+          <p>最近配布されたWavRenamer (<a href="https://www.nicovideo.jp/watch/sm36762395">sm36762395</a>)が使えるかと思いDLしてみたが、なんか動かなかった。</p>
+          <p>しょうがないので映画の字幕とかに使うような書き起こし作成用のプログラムを探していると、あることに思い当たった。</p>
+          <p>…………Win版まじなな☆に音声ファイルが入っているなら、セリフもテキストファイルとして入っているのでは？</p>
+          <br>
+          <p><img src="mgnn/mgnn2.png" alt="" width="30%">
+          <img src="mgnn/mgnn3.png" alt="" width="30%"></p>
+          <br>
+          <p>あった</p>
+          <br>
+          <br>
+          <br>
+
+          <p>音声と書き起こしを使い、適当にスクリプトを書けば作業を自動化できる。</p>
+          <br>
+
+
+          <h2 class="gradorange">スクリプト作成</h2>
+          <p>スクリプトがやることは：</p>
+          <ul>
+            <li>テキストファイルから邪魔な記述<sup>[1]</sup> を取り除く</li>
+            <li>キャラクター名とセリフの書き起こしだけを含む「新ファイル名リスト」を作成</li>
+            <li>同時に、セリフ音声が読み込まれている行を抽出し、「元ファイル名リスト」を作成<sup>[2]</sup></li>
+            <li>「元ファイル名リスト」に含まれている音声ファイルを.oggから.wavに変換し、「新ファイル名リスト」に合わせてリネームする</li>
+          </ul>
+          <br>
+          <p style="font-size:80%;">[1] SE、BGM、演出のタイミング指定など</p>
+          <p style="font-size:80%;">[2] フォルダに未使用の音声やダブついた台詞が混じっているので、実際に読み込まれている音声ファイルを抽出する必要がある</p>
+
+
+
+          <h2 class="gradorange">ガバガバスクリプト: mgnn-renamer.py</h2>
+          <pre><code class="python">
+            import os
+            import sys
+            from pydub import AudioSegment
+
+            episode = str(sys.argv[1])
+            #episode = '26'
+
+            #######################################################
+            path = "E:\Videos\クッキー☆音声\まじなな☆\☆各話"
+            audio_path = "E:\Videos\クッキー☆音声\まじなな☆\☆各話\s" + episode
+            input_txt = episode + '.txt'
+            output_txt = episode + '話書き起こし.txt'
+            #######################################################
+
+            ##書き起こし作成
+
+            #以下のキーワードを含む文字列を消す
+            words_to_delete = ['goto', ';', 'cl', 'ld', 'wavestop', 'quake', '*s_', 'rmode', 'csp','gosub','bg','!d','erasetextwindow','setwindow ','print','lsp','click', 'mov', 'mp3', '.wav', '!w', 'se']
+
+            os.chdir(path)
+
+            if not os.path.isfile(output_txt):
+                open(output_txt, 'w').close()
+
+            input = open(input_txt, "r").read().split("\n")
+            output = open(output_txt, 'w')
+            cut_inputs = []
+            filenames = []
+
+            for i, line in enumerate(input):
+                clean = True
+                line = line.replace("\\","") # 言語環境のせいか\（円マーク・バックスラッシュ）の挙動がおかしいので対策
+                for word in words_to_delete:
+                        if word in line:
+                            clean = False
+                if not line.strip():  # 空行を飛ばす
+                    clean = False
+
+                if line.startswith('dwave 0,"voice'): # 元ファイル名リストに追加
+                    clean = False
+                    line = line[17:].rstrip('"') # 後ろについてるゴミを消す
+                    if  "00t" in line:  # サブタイ音声の扱いが一定しないので消す
+                        continue
+                    elif "000" in line:
+                        continue
+                    else:
+                        filenames.append(line)
+
+                if clean == True: # 新規ファイル名リストに追加
+                    cut_inputs.append(line)
+
+            for i, line in enumerate(cut_inputs): # 鍵カッコで始まる行（＝セリフ）を1つ前の行（＝キャラ名）とつなげる
+                 if line.startswith("「") or line.startswith("『") :
+                    cut_inputs[i-1] = cut_inputs[i-1].strip() + " " + line
+                    cut_inputs.pop(i)
+
+            output.write("\n".join(cut_inputs))
+            output.close()
+
+            ## .wav変換＋リネーム
+
+            output = open(output_txt, 'r')
+            os.chdir(audio_path)
+            #audio_files = os.listdir()
+
+            for i, file in enumerate(filenames):
+                name, ext = os.path.splitext(file) #ファイル名と拡張子を分割
+                name = name + " " + cut_inputs[i] # 元のファイル名 + 空白 + 新ファイル名リスト
+                if ext == ".ogg": #.wavに変換
+                    input_sound = AudioSegment.from_ogg(file)
+                    input_sound.export("{0}.wav".format(name), format="wav")
+                    print(name + ".wav") # デバッグ
+          </code></pre>
+
+          <h2 class="gradorange">実行</h2>
+          <p>コマンドラインから<code>python mgnn-renamer.py + 話数</code>を入力して実行<sup>[3]</sup></p>
+          <p style="font-size:80%;">[3] 1話ずつ実行するのはサブタイ・ナレーションなどのイレギュラーや、見逃したコマンド行などに対応するため</p>
+
+          <p><img src="mgnn/mgnn5.png" alt="" width="60%"></p>
+          <br>
+          <p>生成された書き起こし</p>
+          <br>
+          <p><img src="mgnn/mgnn4.png" alt="" width="60%"></p>
+          <br>
+          <p>ファイル名にキャラ名を付けておいたので、キャラ別に整理しやすい。</p>
+          <br>
+          <p><img src="mgnn/mgnn6.png" alt="" ></p>
+          <br>
+          <p>Windowsのファイル検索は糞なのでSearch Everythingを使おう。</p>
+          <p><img src="mgnn/mgnn7.png" alt="" width="60%"></p>
+          <br>
+          <p>（キャラ別に整理し終わったら配布します）</p>
+
+
+
+
+
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="footer">
+      </div>
+    </footer>
+  </body>
+</html>
