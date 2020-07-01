@@ -33,7 +33,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>あいねいあす</title>
+    <title>laala.mom</title>
     <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css"/>
@@ -50,9 +50,26 @@
     </script>
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@aineias_stymph" />
-    <meta name="twitter:title" content="あいねいあすのホームページ" />
+    <meta name="twitter:title" content="laala.mom" />
     <meta name="twitter:description" content="初htmlです" />
     <meta name="twitter:image" content="https://www.laala.mom/img/website-card.png" />
+    <script type="text/javascript">
+
+    function randomtext() {
+      var videoUrls = ["https://www.nicovideo.jp/watch/sm37035370", "https://www.nicovideo.jp/watch/sm36977144", "https://www.nicovideo.jp/watch/sm36839060", "https://www.nicovideo.jp/watch/sm37058268", "https://www.nicovideo.jp/watch/sm36978552", "https://www.nicovideo.jp/watch/sm37068214", "https://www.nicovideo.jp/watch/sm37082113", "https://www.nicovideo.jp/watch/sm37010279", "https://www.nicovideo.jp/watch/sm36968710", "https://www.nicovideo.jp/watch/sm37006364", "https://www.nicovideo.jp/watch/sm37095288", "https://www.nicovideo.jp/watch/sm36734673", "https://www.nicovideo.jp/watch/sm36907465", "https://www.nicovideo.jp/watch/sm37049839", "https://www.nicovideo.jp/watch/sm36919372", "https://www.nicovideo.jp/watch/sm36953815"];
+
+      var videoTitles = ["金ペチまいらBB", "そうなんだ桃山BB+使用例", "おしりパンパンするメルパン.BB", "色々なインテル長友先輩BB集.blend", "リゼ×シャロ式 2D音madの作り方", "レモネードを作るRUさん.mp4", "桃山", "ガァラプンプンプンプンプンプンプンプンプーン！", "ﾌｧﾗﾗﾏｲｸﾓ…", "野獣先輩ガァララ・ス・リープ説", "緑川さら先輩BB.// kawaii kiri", "まりあRB+.kawaii", "キラッと奴隷オークションやってみた！", "エモいオークションやってみた！", "レディー・オークション！.mp37.5", "ドキドキ！わくわく！ジュエル奴隷オーディション開幕だもん！"]
+
+      var thumbLinks = ["https://nicovideo.cdn.nimg.jp/thumbnails/37035370/37035370.79803465", "https://nicovideo.cdn.nimg.jp/thumbnails/36977144/36977144.38858969", "https://nicovideo.cdn.nimg.jp/thumbnails/36839060/36839060.41176200", "https://nicovideo.cdn.nimg.jp/thumbnails/37058268/37058268.14000473", "https://nicovideo.cdn.nimg.jp/thumbnails/36978552/36978552.53622545", "https://nicovideo.cdn.nimg.jp/thumbnails/37068214/37068214.53502379", "https://nicovideo.cdn.nimg.jp/thumbnails/37082113/37082113.4083186", "https://nicovideo.cdn.nimg.jp/thumbnails/37010279/37010279.29617323", "https://nicovideo.cdn.nimg.jp/thumbnails/36968710/36968710.6250557", "https://nicovideo.cdn.nimg.jp/thumbnails/37006364/37006364.61178228", "https://nicovideo.cdn.nimg.jp/thumbnails/37095288/37095288.65996625", "https://nicovideo.cdn.nimg.jp/thumbnails/36734673/36734673.16351639", "https://nicovideo.cdn.nimg.jp/thumbnails/36907465/36907465.98874789", "https://nicovideo.cdn.nimg.jp/thumbnails/37049839/37049839.25658401", "https://nicovideo.cdn.nimg.jp/thumbnails/36919372/36919372.52204549", "https://nicovideo.cdn.nimg.jp/thumbnails/36953815/36953815.24673555"];
+
+      var dataIndex = Math.floor(Math.random() * videoUrls.length);
+
+      return '<img src="'+ thumbLinks[dataIndex] + '">' + '<br>' + '<a href=\"' + videoUrls[dataIndex] + '">' + videoTitles[dataIndex] + '</a>';
+      }
+
+    document.getElementById("randomticket").innerHTML = randomtext();
+
+  </script>
     </head>
 
   <body>
@@ -225,15 +242,15 @@
             <div class="col-lg-3">
               <div class="col" id="ads">
                 <div class="header">
-                  広告スペース
-                  <a href="#"></a>
+                  <a href="#">チケットを切らして広告できなかった動画</a>
+                  <div id="randomticket"></div>
                 </div>
                 <div class="content">
                   <a href="#">
-                    <img src="img/kobiuri1.jpg" alt="kobiuri">
+                    <img src="img/.jpg" alt="">
                   </a>
-                  <p>©頻尿兄貴</p>
-                  <p>何か思いついたら変えます</p>
+                  <p></p>
+                  <p></p>
                 </div>
 
               </div>
