@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja-jp" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MOHO備忘録：電撃エフェクト</title>
+
+    <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css"/>
+    <link rel="stylesheet" href="../../css/style-header.css"/>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function() {
+
+           $("#header").load("../../header.html");
+           $("#footer").load("../../footer.html");
+    });
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/vs.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@aineias_stymph" />
+    <meta name="twitter:title" content="laala.mom" />
+    <meta name="twitter:description" content="迫真音声素材部 Pythonの裏技" />
+    <meta name="twitter:image" content="https://www.laala.mom/img/website-card.png" />
+</head>
+
+
+
+
+
+  <body>
+
+    <a id="banner" href="#"></a>
+    <header>
+      <div id="header">
+      </div>
+    </header>
+    <div class="container">
+      <div id="sidebar">
+        <div class="side-title">
+          <h2>動画編集・講座</h2>
+        </div>
+        <div class="side-list">
+          <ul>
+            <li><a href="../aviutl.html">AviUtl</a></li>
+            <li><a href="../moho.html">MOHO</a></li>
+            <li><a href="../theater.html">その他</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="inner-container">
+        <div id="content-header">
+          <h1>MOHO備忘録：電撃エフェクト</h1>
+          <p>参考にした動画</p>
+          <iframe width="420" height="315"
+          src="https://www.youtube.com/embed/kUOuEx1HxJo">
+          </iframe>
+        </div>
+        <div id="content-text">
+          <h2 class="gradorange">1. 素材を探す</h2>
+          <p>一番面倒臭い</p>
+          <br>
+          <img src="moho1/1.png" alt="" width="80%">
+          <p>これでいいや</p>
+          <br>
+          <h2 class="gradorange">2. 光球</h2>
+          <img src="moho1/2.png" alt="" width="40%">
+          <p>ベクターレイヤーを追加。適当な図形を手に被せる。</p>
+          <br>
+          <img src="moho1/3.png" alt="" width="40%">
+          <p>レイヤーの設定を開く。"Allow animated layer effects"に☑し、合成モードを"Add" (加算)にする。</p>
+          <br>
+          <img src="moho1/4.png" alt="" width="40%">
+          <p>"Noise settings"にあるやつを全部☑し、"Offset"をぶち上げると円が暴れだす。</p>
+          <p>閉じるときOKを押さないと適応されないので注意</p>
+          <br>
+          <img src="moho1/5.png" alt="" width="60%">
+          <p>円の色を変更する。水たまりにマウスカーソルがついてるやつ（ツールの名前がわからない）に切り替え、円をクリック（市松模様になる）。</p>
+          <p>パレットみたいなやつを使い、色を暗めの青色にする。</p>
+          <br>
+          <img src="moho1/6.png" alt="" width="30%">
+          <img src="moho1/7.png" alt="" width="30%">
+          <p>円を光らせるために加算レイヤーを複製する。レイヤーウィンドウから円のレイヤーを選択した状態で"Reference layer"を4，5回押す。</p>
+          <br>
+          <img src="moho1/8.png" alt="" width="30%">
+          <p>各レイヤーの設定を開き、ノイズのoffsetを適当にずらす</p>
+          <br>
+          <img src="moho1/9.png" alt="" width="60%">
+          <p>一番上のレイヤーにアウトラインを付ける。Generalタブから""compositing effects"の可視化に☑、ブラー半径を3くらいに。”Outline”もONに☑し、色を円と同じ色にする。</p>
+          <br>
+          <img src="moho1/10.png" alt="" width="60%">
+          <p>Ctrl+Rで一時出力。背景が透明だと加算レイヤーが見えにくいので、テスト時は一番下に黒い背景を置いておく。</p>
+          <br>
+
+          <h2 class="gradorange">3. 電撃</h2>
+
+          <img src="moho1/11.png" alt="" width="50%">
+          <p>ベクターレイヤーを追加。</p>
+          <p>光球と同じように"Allow animated layer effects"に☑、合成モードを"Add" (加算)にする。ノイズの設定もほぼ一緒、ただし"Noisy fill"は不要なので消す。</p>
+          <br>
+          <img src="moho1/12.png" alt="" width="50%">
+          <p>ペンツール（？）を開き、適当に電撃を描く。上のチェックボックスは"weld ends"と"auto stroke"以外は消しておくように。</p>
+          <br>
+          <img src="moho1/13.png" alt="" width="50%">
+          <p>このままだと線がふにゃふにゃなのでカクカクにする。選択ツール(G)ですべての頂点を選択。曲ツール？(C)に切り替え、マウスで左方向にドラッグすると曲度？がゼロになる。</p>
+          <br>
+          <img src="moho1/14a.png" alt="" width="50%">
+          <img src="moho1/14.png" alt="" width="20%">
+          <p>変形ツール（T)で電撃の形を調整。フレームを移動して別のパターンを作る。</p>
+          <br>
+          <p>いくつかパターンを作ったら、0~2フレーム間隔で並べる。一番最初のフレームを一番後ろにコピペし、保管を”Cycle”に切り替えるとループする。ループ先は1フレーム目ではなく2フレーム目にしないとループする際ダブつくので注意。</p>
+          <br>
+          <img src="moho1/15.png" alt="" width="20%">
+          <p>さっきと同じ要領でReference layerを連打し、ノイズのOffsetをズラす。</p>
+          <br>
+
+          <h2 class="gradorange">4. 出力</h2>
+          <p>そのままアルファPNGで出力すると加算になってるエフェクトがちゃんと加算されないので、エフェクトのレイヤーは別で出力し、動画内で合成モードを加算にする。</p>
+          <br>
+          <p>結果</p>
+          </video>
+          <video controls loop>
+           <source src="moho1/shouldertackle.mp4" type="video/mp4">
+           Your browser does not support the video tag.
+          </video>
+
+
+
+
+
+
+          <h2 class="gradorange">5. おまけ</h2>
+          <img src="moho1/16.png" alt="" width="80%">
+          <p>線の一部のウェイト(W)を0にし”Stroke Exposure”の数値をいじることによって電撃がぐるぐる回るようなエフェクトも作れる。</p>
+          <p>（ややこしいので元動画を見てください）</p>
+          <p>ループの調整が面倒になるのが難点。</p>
+
+
+
+
+
+
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="footer">
+      </div>
+    </footer>
+  </body>
+</html>
