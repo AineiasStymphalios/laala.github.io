@@ -6,7 +6,6 @@ function randomtext() { //広告できなかったやつをランダムに表示
   var thumbLinks = ['https://nicovideo.cdn.nimg.jp/thumbnails/37751776/37751776.77291598.L',
 'https://nicovideo.cdn.nimg.jp/thumbnails/37732866/37732866.34367775.L',
 'https://nicovideo.cdn.nimg.jp/thumbnails/37776983/37776983.38864409.L',
-'https://nicovideo.cdn.nimg.jp/thumbnails/37776983/37776983.38864409.L',
 'https://nicovideo.cdn.nimg.jp/thumbnails/37350173/37350173.67970690.L',
 'https://nicovideo.cdn.nimg.jp/thumbnails/37810715/37810715.69319042.L',
 'https://nicovideo.cdn.nimg.jp/thumbnails/37839089/37839089.41777305.L',
