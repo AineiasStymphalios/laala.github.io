@@ -3,16 +3,21 @@ function randomtext() { //広告できなかったやつをランダムに表示
 
   var videoTitles = ['野獣先輩白玉みかん説', '【AIれい】れいくんでオナろう', 'みかんの天使しゅぎょう【プリパラ】', '【AIれい】れいくんでオナろう', '【Aviutl】3分でGB素材作ってみた', '【視聴回数\u300077回】キラっとエモ感のプリチャン☆アイドル', 'そうなんだ桃山.senpaiBB', '何でもとりあえず負けてくれるANNYUIチャン', 'ガンダムを継ぎはぎして「やったぜ。」朗読', '寿司を食べに行くルナ・マリウス']
 
-  var thumbLinks = ['https://nicovideo.cdn.nimg.jp/thumbnails/37618046/37618046.40351360.L',
-'https://nicovideo.cdn.nimg.jp/thumbnails/37654300/37654300.82699919.L',
-'https://nicovideo.cdn.nimg.jp/thumbnails/37670651/37670651.77492365.L',
-'https://nicovideo.cdn.nimg.jp/thumbnails/37654300/37654300.82699919.L',
-'https://nicovideo.cdn.nimg.jp/thumbnails/37654220/37654220.46356121.L',
-'https://nicovideo.cdn.nimg.jp/thumbnails/37652409/37652409.16697511.L',
-'https://nicovideo.cdn.nimg.jp/thumbnails/37634035/37634035.50950645.L',
-'https://nicovideo.cdn.nimg.jp/thumbnails/37650161/37650161.32751033.L',
-'https://nicovideo.cdn.nimg.jp/thumbnails/37685765/37685765.10315275.L',
-'https://nicovideo.cdn.nimg.jp/thumbnails/37651730/37651730.55945496.L',];
+  var thumbLinks = ['https://nicovideo.cdn.nimg.jp/thumbnails/37751776/37751776.77291598.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37732866/37732866.34367775.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37776983/37776983.38864409.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37776983/37776983.38864409.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37350173/37350173.67970690.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37810715/37810715.69319042.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37839089/37839089.41777305.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37839260/37839260.50962668.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37696653/37696653.79243484.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37846961/37846961.38192877.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37880642/37880642.85061059.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37895628/37895628.34438065.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37447121/37447121.41882665.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37893479/37893479.1039170.L',
+'https://nicovideo.cdn.nimg.jp/thumbnails/37881604/37881604.20918508.L'];
 
   var dataIndex = Math.floor(Math.random() * videoUrls.length);
 
