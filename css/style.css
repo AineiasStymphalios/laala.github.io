@@ -13,6 +13,11 @@ body {
   box-sizing: border-box;
 }
 
+p {
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
+
 .h1, .h2, .h3, h1, h2, h3 {
   margin-top: 10px;
   margin-bottom: 10px;
