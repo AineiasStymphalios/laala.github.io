@@ -1,30 +1,30 @@
 function randomtext() { //広告できなかったやつをランダムに表示
-  var videoUrls = ['https://www.nicovideo.jp/watch/sm38331110'
-'https://www.nicovideo.jp/watch/sm38336609'
-'https://www.nicovideo.jp/watch/sm38306625'
-'https://www.nicovideo.jp/watch/sm38468289'
-'https://www.nicovideo.jp/watch/sm38473732'
-'https://www.nicovideo.jp/watch/sm38462934'
-'https://www.nicovideo.jp/watch/sm38072637'
-'https://www.nicovideo.jp/watch/sm38348915'
-'https://www.nicovideo.jp/watch/sm38440125'
-'https://www.nicovideo.jp/watch/sm38404602'
-'https://www.nicovideo.jp/watch/sm38102118'
-'https://www.nicovideo.jp/watch/sm38248470'
+  var videoUrls = ['https://www.nicovideo.jp/watch/sm38331110',
+'https://www.nicovideo.jp/watch/sm38336609',
+'https://www.nicovideo.jp/watch/sm38306625',
+'https://www.nicovideo.jp/watch/sm38468289',
+'https://www.nicovideo.jp/watch/sm38473732',
+'https://www.nicovideo.jp/watch/sm38462934',
+'https://www.nicovideo.jp/watch/sm38072637',
+'https://www.nicovideo.jp/watch/sm38348915',
+'https://www.nicovideo.jp/watch/sm38440125',
+'https://www.nicovideo.jp/watch/sm38404602',
+'https://www.nicovideo.jp/watch/sm38102118',
+'https://www.nicovideo.jp/watch/sm38248470',
 'https://www.nicovideo.jp/watch/sm38385118'];
 
-  var videoTitles = ['黒川すず先輩BB.kakkoii'
-'キンタマにハッカ油を塗られたレオナ・ウェストのかわいい！！グルメレース！！'
-'Luv the lUlUNatic??'
-'ちゃっすちゃっす！！'
-'[アイドルタイムプリパラ] インストアレンジメドレー「DREAM TIME MEMORIES」'
-'野獣先輩ファルル説'
-'IKISUGI「夜にオォ～ン！」'
-'Big Oon'
-'テレキャスギオォ～ン！'
-'干し柿食って下痢になる先輩'
-'Friday Night Fuckin' - B.I.L.F'
-'100ぴったりぐライファンファーレ.LcDl'
+  var videoTitles = ['黒川すず先輩BB.kakkoii',
+'キンタマにハッカ油を塗られたレオナ・ウェストのかわいい！！グルメレース！！',
+'Luv the lUlUNatic??',
+'ちゃっすちゃっす！！',
+'[アイドルタイムプリパラ] インストアレンジメドレー「DREAM TIME MEMORIES」',
+'野獣先輩ファルル説',
+'IKISUGI「夜にオォ～ン！」',
+'Big Oon',
+'テレキャスギオォ～ン！',
+'干し柿食って下痢になる先輩',
+'Friday Night Fuckin - B.I.L.F',
+'100ぴったりぐライファンファーレ.LcDl',
 'Geryt Ben Timpol']
 
   var thumbLinks = ['https://nicovideo.cdn.nimg.jp/thumbnails/38331110/38331110.13174240.L',
